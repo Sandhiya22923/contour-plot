@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,initial-sale=!"> 
+        <style>
+            .image{
+                display:block;
+                margin-left: left;
+                margin-right: auto;
+            }
+        </style> 
+    </head>
+</html>
+<body background="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg"
+style="background-repeat:norepeat; background-attachment:fixed;background-size: 100% 100%; ">
+    <h1 style="text-align: center;color: rgb(77, 29, 77);font-size: 80px;"><u>contour plot</u></h1>
+    <h3 style="text-align: left;color:  rgb(77, 29, 77);font-size: 60px;"><u>Definition</u></h3>
+    <p style="color: ; font-size: 40px;">
+        A contour plot is a graphical technique for representing a 3-dimensional surface by
+         plotting constant z slices, called contours, on a 2-dimensional format.That is, given
+          a value for z, lines are drawn for connecting the (x,y) coordinates where that z value occurs.</p>
+    <h3 style="text-align: left;color: rgb(77, 29, 77);font-size: 60px;"><u>Uses</u></h3>
+    <p style="color: black; font-size: 40px;"> Contour plots are used to show the relationship
+         between two independent variables and a dependent variable. The graph shows values of the Z variable for combinations of the X and Y
+          variables. The X and Y values are displayed along the X and Y-axes,
+           while contour lines and bands represent the Z value<br> <br>The "ContourPlot" command in MATHEMATICA
+         set the aspect ratio to use in representing the viewing rectangle--the default is 1. specify NN, NN, as the precise level curves to graph. 
+         number of points in each direction to sample. Raising this number will give more resolution in the picture.<br> <br>Contour lines are most commonly used on topographic maps
+          to illustrate the shape of a given landform or terrain. These maps use contour lines to show areas of different elevations, the distance between these
+           areas, and the direction and slope of the terrain.
+    <h3 style="text-align: left;color: rgb(77, 29, 77);font-size: 60px;"><u>Advantages</u></h3>
+    <p style="color: black; font-size: 40px;">  The Contours provide important information which can help us to study the nature of the terrain. This proves to be useful
+         for the selection of sites, to determine the catchment area of a drainage basin, or to find intervisibility between two or more stations, etc. 
+    <h3 style="text-align: left;color:  rgb(77, 29, 77);font-size: 60px;"><u>program</u></h3>   
+    <p style="color: black; font-size: 40px;">  # Implementation of matplotlib function 
+        import matplotlib.pyplot as plt<br> 
+        import numpy as np<br> 
+        
+        <br>feature_x = np.arange(0, 50, 2)<br> 
+        feature_y = np.arange(0, 50, 3)<br> 
+        
+        [X, Y] = np.meshgrid(feature_x, feature_y)<br> 
+        
+        fig, ax = plt.subplots(1, 1)<br> 
+        
+        Z = np.cos(X / 2) + np.sin(Y / 4)<br> 
+        
+        ax.contour(X, Y, Z)<br> 
+        
+        ax.set_title('Contour Plot')<br> 
+        ax.set_xlabel('feature_x')<br> 
+        ax.set_ylabel('feature_y')<br> 
+        
+        <br>plt.show() 
+    <h3 style="text-align: left;color:  rgb(77, 29, 77);font-size: 60px;"><u>output</u></h> 
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200413022057/example110.png " class="image" width="400" height="400"> <hr>
+    <h4>SUBMITTED BY:SANDHIYA M</h4>
+    <h4>DEPT:B.TECH(AIDS)</h4>
+    <H4>REG NO:51062243023</H4><hr>             
+</body>    
